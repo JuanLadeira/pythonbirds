@@ -16,3 +16,7 @@ if __name__ == '__main__':
     print(Ruan.nome)
     print(Ruan.idade)
     print(Ruan.filhos)
+    Ruan.sobrenome = 'Carlos'
+    print(Ruan.__dict__)
+    del Ruan.sobrenome
+    print(Ruan.__dict__)
