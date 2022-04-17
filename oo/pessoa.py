@@ -9,6 +9,15 @@ class Pessoa:
     def cumprimentar(self):
         return 'olá, meu bom.'
 
+    @staticmethod
+    def metodo_estatico():
+        return  42
+
+    @classmethod
+    def nome_atributos_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
+
+
     pass
 
 
@@ -25,3 +34,5 @@ if __name__ == '__main__':
     del ruan.olhos
     del ruan.sobrenome
     print(ruan.__dict__, f'Ruan tem {ruan.olhos} olhos.')
+    print(Pessoa.metodo_estatico(), ruan.metodo_estatico())
+    print(Pessoa.nome_atributos_de_classe(), ruan.nome_atributos_de_classe())
