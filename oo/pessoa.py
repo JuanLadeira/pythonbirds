@@ -1,2 +1,2 @@
-def Pessoa:
+class Pessoa:
     pass
