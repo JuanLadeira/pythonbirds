@@ -13,7 +13,7 @@ from unittest.case import TestCase
 from atores import Ator, DESTRUIDO, ATIVO, Obstaculo, Porco, PassaroAmarelo, PassaroVermelho
 
 
-class AtorTestes(TestCase):
+class   AtorTestes(TestCase):
     def teste_valores_padrao(self):
         'Testa valores iniciais padrão de um Ator'
         ator = Ator()

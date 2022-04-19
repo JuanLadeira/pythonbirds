@@ -84,7 +84,7 @@ def animar(fase, passo=0.1, delta_t=0.1):
         velocidade_replay = 1
         _animar(delta_t, fase, passo / velocidade_replay, tempo, 'Replay %s vezes mais rápido!' % velocidade_replay)
     apagar_tela()
-    print(fase.status(tempo_final))
+    print(fase.status)
     print(FIM)
 
 

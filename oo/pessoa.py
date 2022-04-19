@@ -11,18 +11,19 @@ class Pessoa:
 
     @staticmethod
     def metodo_estatico():
-        return  42
+        return 42
 
     @classmethod
     def nome_atributos_de_classe(cls):
         return f'{cls} - olhos {cls.olhos}'
 
 
+class Homem(Pessoa):
     pass
 
 
 if __name__ == '__main__':
-    ruan = Pessoa('Maiara', 'Felipe', 'Fernando', nome='Ruan')
+    ruan = Homem('Maiara', 'Felipe', 'Fernando', nome='Ruan')
     print(ruan.cumprimentar())
     print(ruan.nome)
     print(ruan.idade)
