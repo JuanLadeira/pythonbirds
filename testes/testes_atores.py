@@ -13,7 +13,7 @@ from unittest.case import TestCase
 from atores import Ator, DESTRUIDO, ATIVO, Obstaculo, Porco, PassaroAmarelo, PassaroVermelho
 
 
-class   AtorTestes(TestCase):
+class AtorTestes(TestCase):
     def teste_valores_padrao(self):
         'Testa valores iniciais padrão de um Ator'
         ator = Ator()
@@ -41,7 +41,6 @@ class   AtorTestes(TestCase):
         x, y = ator.calcular_posicao(10)
         self.assertEqual(0.3, x)
         self.assertEqual(0.5, y)
-
 
     def teste_colisao_entre_atores_ativos(self):
         """
@@ -109,7 +108,6 @@ class   AtorTestes(TestCase):
         ator.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual(' ', ator.caracter())
 
-
     def assert_colisao_atores_ativos(self, ator, ator2, intervalo=1):
         """
         Se certifica que há colisão entre atores ativos
@@ -146,6 +144,7 @@ class ObstaculoTestes(TestCase):
     """
     Esperado '0' como caracter de obstáculo ativo e ' ' como caracter de obstáculo destruído
     """
+
     def teste_status(self):
         obstaculo = Obstaculo()
         self.assertEqual('O', obstaculo.caracter())
@@ -158,6 +157,7 @@ class PorcoTestes(TestCase):
     """
     Esperado '@' como caracter de porco ativo e '+' como caracter de porco destruido
     """
+
     def teste_status(self):
         porco = Porco()
         self.assertEqual('@', porco.caracter())
@@ -202,10 +202,8 @@ class PassaroVermelhoTests(PassaroBaseTests):
         passaro_vermelho.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual('v', passaro_vermelho.caracter())
 
-
     def teste_velocidade_escalar(self):
         self.assertEqual(20, PassaroVermelho.velocidade_escalar)
-
 
     def teste_foi_lancado(self):
         """
@@ -264,8 +262,6 @@ class PassaroAmareloTests(PassaroBaseTests):
         """
         passaro_amarelo = PassaroAmarelo(1, 1)
         passaro_amarelo.lancar(90, 2)  # passaro lancado a 90 graus no tempo 2 segundos
-
-
 
         # subindo
 
@@ -759,6 +755,6 @@ class PassaroAmareloTests(PassaroBaseTests):
         self.assert_passaro_posicao(1, y, ATIVO, passaro, tempo)
 
 
-if __name__=='__main__':
-    teste= AtorTestes()
+if __name__ == '__main__':
+    teste = AtorTestes()
     teste.teste_colisao_entre_atores_ativos()
