@@ -58,8 +58,6 @@ class Ator():
             if delta_x <= intervalo and delta_y <= intervalo:
                 self.status == outro_ator.status == DESTRUIDO
 
-        pass
-
 
 class Obstaculo(Ator):
     _caracter_ativo = 'O'
@@ -99,6 +97,7 @@ class Passaro(Ator):
 
         :return: booleano
         """
+
         return True
 
     def colidir_com_chao(self):
@@ -107,6 +106,7 @@ class Passaro(Ator):
         o status dos Passaro deve ser alterado para destruido, bem como o seu caracter
 
         """
+
         pass
 
     def calcular_posicao(self, tempo):
@@ -123,7 +123,7 @@ class Passaro(Ator):
         :param tempo: tempo de jogo a ser calculada a posição
         :return: posição x, y
         """
-        return 1, 1
+        return self.x, self.y
 
     def lancar(self, angulo, tempo_de_lancamento):
         """
@@ -139,7 +139,10 @@ class Passaro(Ator):
 
 class PassaroAmarelo(Passaro):
     _caracter_ativo = 'A'
+    _caracter_destruido = 'a'
 
 
 class PassaroVermelho(Passaro):
     _caracter_ativo = 'V'
+    _caracter_destruido = 'v'
+    velocidade_escalar = 20
